@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useStore } from './store/useStore';
 import TaskCard from './components/TaskCard';
 import TaskForm from './components/TaskForm';
@@ -13,6 +13,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   if (!currentUser) {
+    toast.error('Please log in to access the tasks');
     return <Login />;
   }
 

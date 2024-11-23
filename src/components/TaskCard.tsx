@@ -1,4 +1,3 @@
-import React from 'react';
 import { Task } from '../types';
 import { Calendar, Clock, Tag, Users, BarChart } from 'lucide-react';
 import { useStore } from '../store/useStore';
@@ -94,8 +93,13 @@ export default function TaskCard({ task }: Props) {
             <div className="flex items-center gap-2">
               <BarChart size={16} className="text-green-500" />
               <span className="text-green-500">
-                Completed {formatDistanceToNow(new Date(task.updatedAt || ''))} ago
-              </span>
+  {task.updatedAt ? (
+    `Completed ${formatDistanceToNow(new Date(task.updatedAt))} ago`
+  ) : (
+    'Updated time not available'
+  )}
+</span>
+
             </div>
           )}
         </div>
