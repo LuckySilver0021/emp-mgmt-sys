@@ -92,13 +92,11 @@ export default function TaskCard({ task }: Props) {
           {task.status === 'completed' && (
             <div className="flex items-center gap-2">
               <BarChart size={16} className="text-green-500" />
-              <span className="text-green-500">
-  {task.updatedAt ? (
-    `Completed ${formatDistanceToNow(new Date(task.updatedAt))} ago`
-  ) : (
-    'Updated time not available'
-  )}
-</span>
+              {task.updatedAt ? (
+  `Completed ${formatDistanceToNow(new Date(task.updatedAt))} ago`
+) : (
+  'Updated time not available'
+)}
 
             </div>
           )}

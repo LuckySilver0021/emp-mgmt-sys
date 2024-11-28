@@ -46,7 +46,7 @@ export function generateDummyTasks(users: User[]): Task[] {
   const regularUsers = users.filter(u => u.role === 'user');
 
   regularUsers.forEach(user => {
-    const numTasks = Math.floor(Math.random() * 6) + 10; // 10-15 tasks per user
+    const numTasks = Math.floor(Math.random() * 6) + 10; 
     
     for (let i = 0; i < numTasks; i++) {
       const randomTitle = taskTitles[Math.floor(Math.random() * taskTitles.length)];

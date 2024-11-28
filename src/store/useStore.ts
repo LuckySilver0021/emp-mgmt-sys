@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { User, Task, TaskCategory } from '../types';
+import { User, Task,} from '../types';
 import { generateDummyTasks } from '../utils/dummyData';
 import toast from 'react-hot-toast';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Employee } from '../types/employee';
 import { Pencil, Trash2, Mail, Phone, Calendar, Building2 } from 'lucide-react';
 
